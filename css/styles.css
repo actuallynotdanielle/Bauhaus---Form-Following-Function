@@ -70,8 +70,6 @@ li {
 
 }
 
-
-
 .text-over {
     margin:auto;
     background-color:black;
@@ -80,5 +78,26 @@ li {
     color:white;
     text-align: center;
     opacity:.5;
+}
+
+.rightphoto {
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    width:25%;
+    height:80%;
+    overflow:hidden;
+    opacity:.8;
+    border-radius:5px;
+}
+
+.leftphoto {
+    display:flex;
+    flex-direction:column;
+    justify-content:start;
+    width:25%;
+    padding:20px;
+    opacity: 0.8;
+    
 }
 
