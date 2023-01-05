@@ -16,25 +16,27 @@ body {
     background-position:center;
     height:100px;
     border-radius:3px;
+    position:relative;
 }
 
 .bauhaus {
     float:left;
+    position:absolute;
     width:600px;
     margin: 20px 0px 0px 30px;
     padding:10px;
     border-top: 1px solid #665544;
     border-bottom: 1px solid #665544;
-    font-size:36px;
+    font-size:2.1rem;
 }
 
 .breadcrumbs {
     float:right;
-    margin-top: 50px;
-    font-size:18px;
+    margin-top: 3.12rem;
+    font-size:1.1rem;
     }
 
-li {
+.breadcrumbs li {
     height: 100%;
     background-color: white;
     border-radius: 7px;
@@ -58,14 +60,19 @@ li {
     color:white;
 }
 
+.breadcrumbs li:active {
+    font-style:bold;
+}
+
 .lifestyle {
     background-image: url(/css/images/richard-lund-DshGlq55z1U-unsplash.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position:center;
+    flex-wrap: nowrap;
     height:500px;
     border-radius:3px;
-    margin-top:5px;
+    margin:10px;
     display:flex;
 
 }
@@ -78,26 +85,130 @@ li {
     color:white;
     text-align: center;
     opacity:.5;
+    
 }
 
 .rightphoto {
     display:flex;
-    flex-direction:column;
     justify-content:flex-end;
+    flex-wrap: nowrap;
     width:25%;
-    height:80%;
-    overflow:hidden;
+    align-content:center;
     opacity:.8;
     border-radius:5px;
+    padding:30px 10px 30px 10px;
 }
 
 .leftphoto {
     display:flex;
-    flex-direction:column;
     justify-content:start;
+    align-content:center;
+    flex-wrap: nowrap;
     width:25%;
     padding:20px;
     opacity: 0.8;
     
 }
 
+
+#examples-container {
+    text-align:center;
+    font-family: cormorant;
+    line-height:1.5em;
+    padding:5px;
+
+}
+
+.examples {
+    background-image: url(/css/images/chris-lawton-3Ik7xWYJv3U-unsplash.jpg);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    height:600px;
+    margin:0px 0px;
+    border-radius:5px;
+}
+
+.kitchen  {
+    position:absolute;
+    display:flex;
+    height:250px;
+    width:300px;
+    margin-left:29%;
+    margin-top: 5%;
+}
+
+.florian {
+    display:flex;
+    position:absolute;
+    height:250px;
+    width:300px;
+    padding: 0% 20px 20px 765px; 
+}
+
+.sterlinglewis {
+    display:flex;
+    position:absolute;
+    height:250px;
+    width:auto;
+    padding: 0px 20px;
+}
+
+img {
+    border-radius:5px;
+    box-shadow: 1px 1px 3px -1px rgb(237, 209, 209);
+}
+
+
+.modernul {
+    display:inline-block;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    font-size: 1.3rem;
+    margin:20px;
+}
+
+
+.examples h2 {
+    font-style: bold;
+    font-size: 2.5rem;
+    display:inline-block;
+    margin: 50px 150px 50px 0px;
+}
+
+ .teamcontainer {
+    background-image: url(/css/images/sergey-zolkinteambkgrnd.jpg);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    height:600px;
+    width:auto;
+    border-radius: 5px;
+    margin:5px;
+
+ }
+
+.team img {
+    display:flex;
+    width:auto;
+    height:300px;
+    
+
+}
+
+.team {
+    display:flex;
+    justify-content:space-around;
+}
+
+.Jurica {
+    margin-top:150px;
+}
+
+.Christian {
+    margin-top:130px;
+}
+
+.Christina {
+    margin-top:150px;
+}
