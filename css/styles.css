@@ -1,20 +1,29 @@
 @font-face {
     font-family: 'Cormorant';
     src:local;
-
 }
 
 body {
     font-family: 'Cormorant';
+    background-color: rgb(57, 55, 55);
 }
 
+img {
+    border-radius:5px;
+    box-shadow: 1px 1px 3px -1px rgb(237, 209, 209);
+}
 
 .header-container {
     background-image: url(/css/images/wesley-tingey--concrete.jpg);
+    background:linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+    ),;
     background-repeat: no-repeat;
     background-size:cover;
     background-position:center;
-    height:100px;
+    min-height:6.25rem;
+    width:auto;
     border-radius:3px;
     position:relative;
 }
@@ -22,9 +31,10 @@ body {
 .bauhaus {
     float:left;
     position:absolute;
-    width:600px;
+    width:37.5rem;
+    height:auto;
     margin: 20px 0px 0px 30px;
-    padding:10px;
+    padding:.625rem;
     border-top: 1px solid #665544;
     border-bottom: 1px solid #665544;
     font-size:2.1rem;
@@ -37,7 +47,8 @@ body {
     }
 
 .breadcrumbs li {
-    height: 100%;
+    height: auto;
+    width:auto;
     background-color: white;
     border-radius: 7px;
     letter-spacing: 1px;
@@ -47,7 +58,7 @@ body {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    font-size: .75rem;
     transform: skew(-21deg);
     box-shadow: 0 2px 5px rgba(0,0,0,0.26);
     margin-right: 20px;
@@ -64,6 +75,20 @@ body {
     font-style:bold;
 }
 
+
+@media (max-width: 375px) {
+  .bauhaus {
+      width: 25rem; /* adjust the width to a smaller value */
+  }
+  .breadcrumbs {
+      margin-top: 1.5rem; /* adjust the margin-top to a smaller value */
+  }
+  .breadcrumbs li {
+      font-size: .5rem; /* adjust the font-size to a smaller value */
+  }
+}
+
+
 .lifestyle {
     background-image: url(/css/images/richard-lund-DshGlq55z1U-unsplash.jpg);
     background-repeat: no-repeat;
@@ -71,6 +96,7 @@ body {
     background-position:center;
     flex-wrap: nowrap;
     height:500px;
+    width:auto;
     border-radius:3px;
     margin:10px;
     display:flex;
@@ -92,7 +118,7 @@ body {
     display:flex;
     justify-content:flex-end;
     flex-wrap: nowrap;
-    width:25%;
+    width:auto;
     align-content:center;
     opacity:.8;
     border-radius:5px;
@@ -104,111 +130,375 @@ body {
     justify-content:start;
     align-content:center;
     flex-wrap: nowrap;
-    width:25%;
+    width:auto;
     padding:20px;
+    margin-right:5px;
     opacity: 0.8;
     
 }
 
 
+
 #examples-container {
-    text-align:center;
-    font-family: cormorant;
-    line-height:1.5em;
-    padding:5px;
-
-}
-
-.examples {
-    background-image: url(/css/images/chris-lawton-3Ik7xWYJv3U-unsplash.jpg);
+    display:flex;
+    align-items: flex-start;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    background-image: url(/css/images/pierre-chatel-innocenti-nmDmcagP1lM-unsplash.jpg);
     background-position:center;
     background-size:cover;
     background-repeat:no-repeat;
     height:600px;
-    margin:0px 0px;
-    border-radius:5px;
+    width:auto;
+    margin:5px;
+    border-radius: 5px;
+}
+
+.modern {
+    display:flex;
+    margin-left:5%;
+    font-size:2.5rem;
+}
+
+.modernul {
+    font-style: bold;
+    font-size: 1.5rem;
+    margin-left:60%;
+}
+
+.exampleimg {
+    display:flex;
+    justify-content:space-around;
+    padding: 25px;
+    border-radius: 5px;
+    height:11rem;
+    width:auto;
+        
+}
+
+.examples {
+    width:100%;
 }
 
 .kitchen  {
-    position:absolute;
     display:flex;
-    height:250px;
-    width:300px;
-    margin-left:29%;
-    margin-top: 5%;
-}
+    margin-top:20px;  
+    height:13rem;
+    width:auto;
+ }
 
 .florian {
     display:flex;
-    position:absolute;
-    height:250px;
-    width:300px;
-    padding: 0% 20px 20px 765px; 
+    height:13rem;
+    width:auto;
 }
 
 .sterlinglewis {
     display:flex;
-    position:absolute;
-    height:250px;
+    margin-top:px;
+    height:13rem;
     width:auto;
-    padding: 0px 20px;
 }
 
-img {
-    border-radius:5px;
-    box-shadow: 1px 1px 3px -1px rgb(237, 209, 209);
-}
-
-
-.modernul {
-    display:inline-block;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    font-size: 1.3rem;
-    margin:20px;
+@media  and (max-width:480px) {
+  #examples-container {
+    width:100%;
+    flex-direction: column;
+  }
 }
 
 
-.examples h2 {
-    font-style: bold;
-    font-size: 2.5rem;
-    display:inline-block;
-    margin: 50px 150px 50px 0px;
+@media screen and (max-width:768px) {
+  .teamcontainer{
+    max-width:100%;
+    flex-direction: column;
+  }
+
 }
 
- .teamcontainer {
+@media screen and (max-width:1024px) {
+  .teamcontainer {
+    display:flex;
+    max-width:100%;
+    justify-content:space-around;
+}
+}
+
+
+
+#team-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.teamcontainer {
     background-image: url(/css/images/sergey-zolkinteambkgrnd.jpg);
+    background:linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+    ),;
     background-position:center;
     background-size:cover;
     background-repeat:no-repeat;
-    height:600px;
+    height:700px;
     width:auto;
     border-radius: 5px;
     margin:5px;
-
  }
 
-.team img {
-    display:flex;
-    width:auto;
-    height:300px;
+ .team {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Jurica h2, .Christian h2, .Christina h2 {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.Jurica h3, .Christian h3, .Christina h3 {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: bold;
+}
     
-
+.Jurica, .Christian, .Christina {
+    flex: 1;
+    max-width: 30%;
+    margin: 5px 5px;
+    text-align: center;
 }
 
-.team {
-    display:flex;
-    justify-content:space-around;
+.Jurica img, .Christian img, .Christina img {
+    height: 16rem;
+    width: auto;
+    margin: 20px 0;
 }
 
-.Jurica {
-    margin-top:150px;
+@media  and (max-width:480px) {
+  #team-container {
+    width:100%
+  }
 }
 
-.Christian {
-    margin-top:130px;
+
+@media screen and (max-width:768px) {
+  #team-container {
+    max-width:100%
+  }
 }
 
-.Christina {
-    margin-top:150px;
+@media screen and (max-width:1024px) {
+  #team-container {
+    max-width:100%
+  }
+}
+
+section{
+    width: auto;
+    height: 700px;
+    background-color:#001923;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 5px;
+    padding:10px 10px;
+    
+  }
+  
+  section:before{
+    content: '';
+    position:absolute;
+    width: 250px;
+    height: 250px;
+    top: 0;
+    left: 0;
+  }
+  
+  section:after{
+    content: '';
+    position:absolute;
+    width: 250px;
+    height: 250px;
+    bottom: 0;
+    right: 0;
+    z-index:;
+  }
+  
+  .container{
+    margin-top:15px;
+    margin-bottom: 15px;
+    z-index: 1000;
+    position:relative;
+    height: 550px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    overflow-x: hidden;
+    backdrop-filter: blur(25px);
+  }
+  
+  .container:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 0;
+    left:-40%;
+    z-index:-1;
+    transform:skewX(-45deg);
+  }
+  
+  .container h2{
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .row{
+    width: 100%;
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:20px;
+  }
+  
+  
+  .col{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 20px;
+  }
+  
+  .inputbox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color:#fff;
+  }
+  
+  .inputbox input,
+  .inputbox textarea{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 0 10px;
+    z-index: 1;
+    resize: none;
+  }
+  
+  
+  
+  
+  .text{
+    position:absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    padding: 0 10px;
+    transition: .3s;
+  }
+  
+  .inputbox input:focus + .text,
+  .inputbox textarea:focus + .text{
+    top: -35px;
+    left: -10px;
+  }
+  
+  .inputbox input:valid + .text,
+  .inputbox textarea:valid + .text{
+    top: -35px;
+    left: -10px;
+  }
+  
+  .line{
+    position:absolute;
+    bottom:0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: .3s;
+  }
+  
+  .inputbox input:focus ~ .line,
+  .inputbox textarea:focus ~ .line{
+    height: 100%;
+  }
+  
+  .inputbox input:valid ~ .line,
+  .inputbox textarea:valid ~ .line{
+    height: 100%;
+  }
+  
+  .textarea{
+    position: relative;
+    width: 100%;
+    height:100px ;
+  }
+  
+  
+  .textarea .text{
+    padding: 0 10px;
+  }
+  
+  .textarea textarea{
+    padding: 10px;
+  }
+  
+  .col input[type="submit"]{
+    background-color: #fff;
+    padding: 15px 25px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width:1024px) {
+    .container{
+       max-width: 100%;
+    }
+    
+  }
+  
+  @media screen and (max-width:768px) {
+    .container{
+       max-width: 100%;
+    }
+    section{
+    width: 100%;
+    height: 100%;
+    background-color:#001923;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+  }
+  }
+  
+  @media screen and (max-width:480px) {
+    .container{
+      padding: 50px 20px;
+    }
+    section:after{
+    content: '';
+    position:absolute;
+    width: 250px;
+    height: 250px;
+    bottom:-400px;
+    right: 0;
+    z-index:;
+  }
 }
